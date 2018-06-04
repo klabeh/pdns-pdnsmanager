@@ -1,7 +1,8 @@
 version: "2"
 services:
   pdns:
-    build: . 
+    build: .
+    restart: always
     ports:
     - "53:53"
     - "53:53/udp"
