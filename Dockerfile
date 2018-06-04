@@ -21,11 +21,6 @@ RUN apt-get update && apt-get install -y \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-### PDNS ###
-
-#RUN cd /tmp && wget https://downloads.powerdns.com/releases/deb/pdns-static_${VERSION}_amd64.deb && dpkg -i pdns-static_${VERSION}_amd64.deb && rm pdns-static_${VERSION}_amd64.deb
-#RUN useradd --system pdns
-
 COPY assets/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY assets/nginx/vhost.conf /etc/nginx/sites-enabled/vhost.conf
 COPY assets/nginx/fastcgi_params /etc/nginx/fastcgi_params
