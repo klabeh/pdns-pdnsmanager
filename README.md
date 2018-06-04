@@ -1,1 +1,1 @@
-# PowerDNS Docker Images with PDNS Manager Frontend
+# PowerDNS Docker Images with PDNS Manager
