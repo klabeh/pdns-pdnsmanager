@@ -42,4 +42,10 @@ sed -i "s/{{PDNS_RECURSIVE_CACHE_TTL}}/${PDNS_RECURSIVE_CACHE_TTL}/" /etc/powerd
 sed -i "s/{{PDNS_ALLOW_RECURSION}}/${PDNS_ALLOW_RECURSION}/" /etc/powerdns/pdns.conf
 sed -i "s/{{PDNS_RECURSOR}}/${PDNS_RECURSOR}/" /etc/powerdns/pdns.conf
 
+### PDNSMANAGER
+sed -i "s/{{MYSQL_HOST}}/${MYSQL_HOST}/" /var/www/html/config/config-user.php
+sed -i "s/{{MYSQL_USER}}/${MYSQL_USER}/" /var/www/html/config/config-user.php
+sed -i "s/{{MYSQL_PASSWORD}}/${MYSQL_PASSWORD}/" /var/www/html/config/config-user.php
+sed -i "s/{{MYSQL_DB}}/${MYSQL_DB}/" /var/www/html/config/config-user.php
+
 exec /usr/bin/supervisord
