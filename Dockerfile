@@ -44,8 +44,7 @@ RUN mkdir -p /run/php/
 RUN mkdir -p /var/www/html/ \
 	&& cd /var/www/html \
 	&& rm -rf /var/www/html/* \
-	&& git clone https://github.com/loewexy/pdnsmanager.git . \
-	&& rm -R /var/www/html/install
+	&& git clone https://github.com/loewexy/pdnsmanager.git .
 
 RUN chown -R www-data:www-data /var/www/html/ \
 	&& chmod 644 /etc/powerdns/pdns.d/pdns.*
