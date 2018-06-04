@@ -46,6 +46,8 @@ RUN mkdir -p /var/www/html/ \
 	&& rm -rf /var/www/html/* \
 	&& git clone https://github.com/loewexy/pdnsmanager.git .
 
+COPY assets/pdnsmanager/config-user.php /var/www/html/config/config-user.php
+
 RUN chown -R www-data:www-data /var/www/html/ \
 	&& chmod 644 /etc/powerdns/pdns.d/pdns.*
 
